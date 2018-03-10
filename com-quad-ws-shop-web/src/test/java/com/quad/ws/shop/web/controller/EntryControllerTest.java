@@ -39,9 +39,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 /* CONTROLLER INTEGRATION TESTING using MockMvc instance to setup a Spring MVC context with a web server */
 @RunWith(MockitoJUnitRunner.Silent.class)
-//@WebMvcTest(controllers = EntryController.class, secure = false)
 
-//@RunWith(SpringRunner.class)
 @WebMvcTest(controllers = EntryController.class, secure = false)
 public class EntryControllerTest {
 
@@ -72,7 +70,6 @@ public class EntryControllerTest {
     private static final String BASE_URL = "/quad/ws";
     private static final String SHOP_SUBPATH = "shop";
     private List<String> listCategory = new ArrayList<String>();
-    // private static final String COMMENT_SUBPATH = "comment";
     private Clothing dummyClothing;
 
     private CellPhone dummyCellPhone;
@@ -148,8 +145,7 @@ public class EntryControllerTest {
         for(int i=0;i<listCategory.size();i++){
             List<Product> testList= new ArrayList<Product>();
             String target=listCategory.get(i);
-            log.info("listCategory  "+listCategory.size());
-            log.info("target  "+target);
+
             switch(target){
                 case "CLOTHING":
                     testList.add(dummyClothing);
@@ -191,7 +187,6 @@ public class EntryControllerTest {
 
         givenDummyClothing();
         doNothing().when(defaultClothingService).addClothing(dummyClothing);
-        log.info("Path POST "+buildPostUrl(SHOP_SUBPATH,"CLOTHING").toLowerCase());
         // when-then
         mockMvc.perform(post(buildPostUrl(SHOP_SUBPATH,"CLOTHING").toLowerCase())
                 .contentType(MediaType.APPLICATION_JSON)
@@ -205,7 +200,6 @@ public class EntryControllerTest {
 
         givenDummyHandMade();
         doNothing().when(defaultHandMadeService).addHandMade(dummyHandMade);
-        //log.info("Path POST "+buildPostUrl(SHOP_SUBPATH,"CLOTHING").toLowerCase());
         // when-then
         mockMvc.perform(post(buildPostUrl(SHOP_SUBPATH,"HANDMADE").toLowerCase())
                 .contentType(MediaType.APPLICATION_JSON)

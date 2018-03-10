@@ -27,9 +27,7 @@ public class DefaultCellPhoneService implements CellPhoneService {
         Long duplicateProductId=cellPhone.getProductId();
 
         Product duplicateProduct=productDao.findOne(duplicateProductId);
-        log.info("ProductID "+duplicateProductId);
 
-        log.info("CellPhone  "+duplicateProduct);
         if(null != duplicateProduct){
             throw new DuplicateProductIdException(duplicateProductId,EXCEPTION_MESSAGE_DUPLICATE_PRODUCT_ID);
         }
