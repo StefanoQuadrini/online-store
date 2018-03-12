@@ -3,11 +3,11 @@
 </h1>
 
 A RESTful backend API with five services:
-- Product service (*product entity: productId, name, price,description,categories)
-- Clothing service (*clothing entity: size, brand, colour)
-- HandMade service (*handmade entity: type, madeIn)
-- Videogame service (*videogame entity: platform, plot)
-- Cell phone service (*cellphone entity: operatingSystem, display,processor,camera,warrantyPeriod)
+- Product service (*product entity: productId, name, price,description,categories*)
+- Clothing service (*clothing entity: size, brand, colour*)
+- HandMade service (*handmade entity: type, madeIn*)
+- Videogame service (*videogame entity: platform, plot*)
+- Cell phone service (*cellphone entity: operatingSystem, display,processor,camera,warrantyPeriod*)
 
 
 
@@ -16,6 +16,7 @@ A RESTful backend API with five services:
 - Spring MVC
 - Spring Data JPA
   * out-of-the-box DAO-generation at runtime via method-naming conventions
+  * Inheritance with SINGLE_TABLE strategy
 - Embedded db H2
 - Maven
 - Git
@@ -29,7 +30,10 @@ A RESTful backend API with five services:
  - backend services able to handle multiple POST requests independently at the same time
  - backend services able to handle GET for a single product or for a whole category
 
-
+###DB inizialization
+- With the start of the application, the database is populated with a set of products.
+- The product inizializated in DB have the follow id: 1, 2, 3, 4, 5.
+   
 ### Authentication
 - no authentication
 
@@ -47,9 +51,9 @@ A RESTful backend API with five services:
 ## Quick start
 Below all the commands to clone, build and run the project with Maven and Java 8 JDK:
 - `git clone https://github.com/StefanoQuadrini/online-store.git`
-- `cd /com-quad-ws-shop-web`
+- `cd online-store/com-quad-ws-shop-web`
 - `mvn clean install`
-- `java -jar /target/com-quad-ws-shop-web-0.0.1.SNAPSHOT.jar`
+- `java -jar target/com-quad-ws-shop-web-0.0.1-SNAPSHOT.jar`
 - the embedded servlet container starts at `http://localhost:4000`
 
 ## Running
@@ -138,7 +142,7 @@ Examples of returned JSONs:
     "categories": "CELL_PHONES",
     "operatingSystem": "Android",
     "display": "Camera 5x",
-    "processor": "i7",
+    "processor": "Cortex-A73",
     "camera": "F55Px",
     "warrantyPeriod": 0
 }
@@ -160,7 +164,7 @@ Examples of returned JSONs:
         "description": "Amazing War game",
         "categories": "VIDEO_GAMES",
         "platform": "Playstation 3",
-        "plot": "ff"
+        "plot": "world war history"
     },
     {
         "productId": 5,
@@ -169,7 +173,7 @@ Examples of returned JSONs:
         "description": "Fantascientific War game",
         "categories": "VIDEO_GAMES",
         "platform": "Playstation 4",
-        "plot": "ff"
+        "plot": "Galactic war"
     }
 ]
 ````
