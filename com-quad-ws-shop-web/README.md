@@ -26,13 +26,13 @@ A RESTful backend API with five services:
 ### Implemented requirements
 - endpoint for providing to a merchant to offer goods (in Json). The good are divided in four categories(clothing, handmade, videogame, cellphone) 
 - endpoint for creating products of each category
-- The embedded DB is iniatilized with a set of products.
+- the embedded DB is iniatilized with a set of products.
  - backend services able to handle multiple POST requests independently at the same time
  - backend services able to handle GET for a single product or for a whole category
 
-###DB inizialization
-- With the start of the application, the database is populated with a set of products.
-- The product inizializated in DB have the follow id: 1, 2, 3, 4, 5.
+### DB inizialization
+- with the start of the application, the database is populated with a set of products.
+- the product inizializated in DB have the follow id: 1, 2, 3, 4, 5.
    
 ### Authentication
 - no authentication
@@ -58,7 +58,7 @@ Below all the commands to clone, build and run the project with Maven and Java 8
 
 ## Running
 ### POST Videogame 
-- URL is `http://localhost:4000/quad/ws/shop/videogame'
+- URL is `http://localhost:4000/quad/ws/shop/videogame`
 
 JSON examples to POST a videogame:
 ````
@@ -74,7 +74,7 @@ JSON examples to POST a videogame:
 ````
 
 ### POST Clothing 
-- URL is `http://localhost:4000/quad/ws/shop/clothing'
+- URL is `http://localhost:4000/quad/ws/shop/clothing`
 
 JSON examples to POST a clothing:
 ````
@@ -91,7 +91,7 @@ JSON examples to POST a clothing:
 ````
 
 ### POST Cell Phone 
-- URL is `http://localhost:4000/quad/ws/shop/cellphone'
+- URL is `http://localhost:4000/quad/ws/shop/cellphone`
 
 JSON examples to POST a cellphone:
 ````
@@ -110,7 +110,7 @@ JSON examples to POST a cellphone:
 ````
 
 ### POST Handmade 
-- URL is `http://localhost:4000/quad/ws/shop/handmade'
+- URL is `http://localhost:4000/quad/ws/shop/handmade`
 
 JSON examples to POST a handmade:
 ````
