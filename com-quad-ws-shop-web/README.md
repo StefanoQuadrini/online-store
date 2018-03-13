@@ -26,7 +26,7 @@ A RESTful backend API with five services:
 ### Implemented requirements
 - endpoint for providing to a merchant the possibility to offer goods (in Json). The good are divided in four categories(clothing, handmade, videogame, cellphone) 
 - endpoint for creating products of each category
-- the embedded DB is iniatilized with a set of products.
+- the embedded DB is initialized with a set of products.
  - backend services able to handle multiple POST requests independently at the same time
  - backend services able to handle GET for a single product or for a whole category
 
@@ -57,6 +57,7 @@ Below all the commands to clone, build and run the project with Maven and Java 8
 - the embedded servlet container starts at `http://localhost:4000`
 
 ## Running
+- to manual-testing the Rest application use Postman or similar tools.
 ### POST Videogame 
 - URL is `http://localhost:4000/quad/ws/shop/videogame`
 
