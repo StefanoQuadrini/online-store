@@ -5,7 +5,7 @@
 
 	<groupId>com.quad.ws.shop</groupId>
 	<artifactId>com-quad-ws-shop-web</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<packaging>jar</packaging>
 
 	<name>ShopOnlineApplication</name>

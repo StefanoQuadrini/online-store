@@ -53,7 +53,7 @@ Below all the commands to clone, build and run the project with Maven and Java 8
 - `git clone https://github.com/StefanoQuadrini/online-store.git`
 - `cd online-store/com-quad-ws-shop-web`
 - `mvn clean install`
-- `java -jar target/com-quad-ws-shop-web-0.0.1-SNAPSHOT.jar`
+- `java -jar target/com-quad-ws-shop-web-0.1.jar`
 - the embedded servlet container starts at `http://localhost:4000`
 
 ## Running
