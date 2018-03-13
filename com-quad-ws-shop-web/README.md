@@ -24,13 +24,13 @@ A RESTful backend API with five services:
 - Lombok
 ## Features
 ### Implemented requirements
-- endpoint for providing to a merchant to offer goods (in Json). The good are divided in four categories(clothing, handmade, videogame, cellphone) 
+- endpoint for providing to a merchant the possibility to offer goods (in Json). The good are divided in four categories(clothing, handmade, videogame, cellphone) 
 - endpoint for creating products of each category
 - the embedded DB is iniatilized with a set of products.
  - backend services able to handle multiple POST requests independently at the same time
  - backend services able to handle GET for a single product or for a whole category
 
-### DB inizialization
+### DB initialization
 - with the start of the application, the database is populated with a set of products.
 - the product inizializated in DB have the follow id: 1, 2, 3, 4, 5.
    
